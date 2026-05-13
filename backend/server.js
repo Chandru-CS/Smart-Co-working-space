@@ -90,7 +90,7 @@ app.use((err, req, res, next) => {
 // ── Start ─────────────────────────────────────────────────────────────────────
 const PORT = process.env.PORT || 5000;
 mongoose
-  .connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/cowork_platform_v2')
+  .connect(process.env.MONGO_URI || 'mongodb://localhost:27017/cowork_platform_v2')
   .then(() => {
     console.log('✅ MongoDB connected');
     server.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
